@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+
+    <data>
+        <variable
+                name="data"
+                type="com.devforfun.launchapp.api.model.Launch"/>
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/card_view"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_margin="4dp"
+            android:layout_height="@dimen/card_height"
+           >
+
+    <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/title_size"
+            android:text="@{data.name}"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_margin="@dimen/margins"
+    />
+
+        <TextView
+                android:id="@+id/window_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                android:text="@{data.windowsStart}"
+                android:layout_margin="@dimen/margins"
+                android:textAlignment="center"
+        />
+
+        <TextView
+                android:id="@+id/window_end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{data.windowed"
+                app:layout_constraintTop_toBottomOf="@id/window_start"
+                android:layout_margin="@dimen/margins"
+                android:textAlignment="center"
+        />
+
+        <TextView
+                android:id="@+id/net"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/window_end"
+                android:text="@{data.net}"
+                android:layout_margin="@dimen/margins"
+                android:textAlignment="center"
+        />
+
+        <TextView
+                android:id="@+id/hash_tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{data.hashTag}"
+                app:layout_constraintTop_toBottomOf="@id/hash_tag"
+                android:layout_margin="@dimen/margins"
+                android:textAlignment="center"
+
+        />
+
+        <TextView
+                android:id="@+id/changed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{data.changed}"
+                app:layout_constraintTop_toBottomOf="@id/changed"
+                android:layout_margin="@dimen/margins"
+                android:textAlignment="center"
+        />
+
+</android.support.constraint.ConstraintLayout>
+
+</layout>

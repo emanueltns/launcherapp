@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LaunchApp</string>
+    <string name="EXTRA_LAUNCH">extra_launch</string>
+</resources>
